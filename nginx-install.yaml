@@ -9,7 +9,7 @@
    - name: Install Nginx
      apt:
        name: nginx
-       state: installed
+       state: absent
        update_cache: true
      notify:
       - Start Nginx
