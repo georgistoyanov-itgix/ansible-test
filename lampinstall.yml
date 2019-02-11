@@ -19,6 +19,14 @@
       - mariadb
     - name: copy file
       shell: echo "<?php phpinfo (); ?>" > /var/www/html/info.php
+<<<<<<< HEAD
+=======
+    - name: install mariadb
+      yum: name={{item}} state=installed
+      with_items:
+      - mariadb-server
+      - mariadb
+>>>>>>> 8f3a7dc7f09288ca7365571efd4d735a364509ca
     - name: Start service httpd, if not started
       service:
         name: httpd
